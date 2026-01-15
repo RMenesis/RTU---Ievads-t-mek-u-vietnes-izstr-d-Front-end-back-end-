@@ -1,0 +1,14 @@
+body{
+    max-width: 1200px
+    min-width: 400px;
+    width: 80%;
+    margin: auto;
+    background-color: #f4f4f4;
+
+}
+
+main, footer{
+    background-color: beige
+    padding: 20px;
+
+}
