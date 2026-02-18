@@ -71,6 +71,22 @@ nav a {
     position: relative;
 }
 
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
 nav a:hover {
     color: #3498db;
     transform: translateY(-2px);
@@ -166,21 +182,31 @@ section {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
 }
 
 .submit-btn {
-    background: #3498db;
+    background: linear-gradient(135deg, #3498db 0%, #2a5298 100%);
     color: white;
     padding: 12px 30px;
     border: none;
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .submit-btn:hover {
-    background: #2980b9;
+    background: linear-gradient(135deg, #2980b9 0%, #1e3c72 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
 }
 
 /* Footer */
@@ -191,8 +217,50 @@ footer {
     margin-top: 4rem;
 }
 
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #2980b9;
+}
+
+footer p {
+    margin: 0;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    #hero h1 { font-size: 2.5rem; }
-    #about, #contact { margin: 1rem; }
+    #hero h1 { 
+        font-size: 2.5rem; 
+    }
+    #about, #contact { 
+        margin: 1rem; 
+    }
+    nav {
+        padding: 0.8rem 1rem;
+    }
+    nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    #hero h2 {
+        font-size: 1.4rem;
+    }
+    #hero img {
+        width: 150px;
+        height: 150px;
+    }
+    nav a {
+        margin: 0 0.5rem;
+        font-size: 0.85rem;
+    }
 }
