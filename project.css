@@ -1,0 +1,111 @@
+/* Project Page Specific Styles */
+
+/* Header for the Project Page */
+.projects-header {
+    background: #2c3e50;
+    color: white;
+    padding: 6rem 0 3rem;
+    text-align: center;
+}
+
+/* The Grid System */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 4rem 0;
+}
+
+/* Individual Project Card */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    overflow: hidden;
+    text-align: left; /* Keep details readable */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.project-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+/* ROI/Result Badge */
+.project-result {
+    display: inline-block;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Tech Tags (Python, VBA, etc.) */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+/* Case Study Link */
+.project-link {
+    display: block;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.project-link:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+}
